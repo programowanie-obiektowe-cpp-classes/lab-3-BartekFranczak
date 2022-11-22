@@ -4,8 +4,8 @@
 
 unsigned int transportujFlota(unsigned int towar)
 {
-    unsigned int ile_przetransportowal;
-    unsigned int ilosc_zeglowek;
+    unsigned int ile_przetransportowal=0;
+    unsigned int ilosc_zeglowek=0;
     Stocznia stocznia{};
     
     while(ile_przetransportowal < towar){
