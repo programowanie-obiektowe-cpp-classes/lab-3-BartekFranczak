@@ -4,6 +4,21 @@
 
 unsigned int transportujFlota(unsigned int towar)
 {
+    unsigned int ile_przetransportowal;
+    unsigned int ilosc_zeglowek;
+    Stocznia stocznia{};
+    
+    while(ile_przetransportowal < towar){
+
+        Statek* s1 = stocznia();
+        unsigned int  transport= s1->transportuj();
+        ile_przetransportowal += transport;
+        delete s1;
+        if (dynamic_cast<Zaglowiec*>(s1)!=nullptr){
+            ilosc_zeglowek++; 
+        }
+        
+    } 
     // Twoja implementacja tutaj
-    return 0;
+    return ilosc_zeglowek;
 }
