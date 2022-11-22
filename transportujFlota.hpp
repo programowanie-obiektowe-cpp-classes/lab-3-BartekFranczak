@@ -13,11 +13,11 @@ unsigned int transportujFlota(unsigned int towar)
         Statek* s1 = stocznia();
         unsigned int  transport= s1->transportuj();
         ile_przetransportowal += transport;
-        delete s1;
+        
         if (dynamic_cast<Zaglowiec*>(s1)!=nullptr){
             ilosc_zeglowek++; 
         }
-        
+        delete s1;
     } 
     // Twoja implementacja tutaj
     return ilosc_zeglowek;
